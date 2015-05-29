@@ -367,8 +367,105 @@ main {
 
 /* Local varieties */
 
+table thead {
+  background: rgb(106,196,174);
+  color: black;
+}
+
+.app-bar {
+  background-color: white;
+  color: black;
+}
+
+.app-bar-container {
+  background-color: white;
+  color: black;
+}
+
+.app-bar .logo {
+  color: black;
+}
+
+.navdrawer-container {
+  background-color: #ffd520;
+  color: black;
+}
+
+.navdrawer-container ul li a {
+  color: black;
+}
+
 .navdrawer-container ul li.active {
   background-color: rgba(255, 255, 255, 0.2);
+}
+
+label {
+  display: block;
+  margin-bottom: 0;
+}
+
+input, textarea {
+  width: 100%;
+  border: 1px solid gray;
+  padding: 0.5rem 0.65rem;
+}
+
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  background-color: #ffd520;
+  color: black;
+  line-height: 1;
+  font-weight: bold;
+  padding: 1rem;
+  border: 0;
+  text-align: center;
+}
+
+.app-bar button {
+  background-color: #ffd520;
+  color: black;
+}
+
+.app-bar button:hover {
+  background-color: #ffe023;
+}
+
+.app-bar button:focus {
+  background-color: #ffe023;
+}
+
+.statusbar-container {
+  width: 100%;
+  float: left;
+  clear: both;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+legend {
+  font-weight: 700;
+}
+
+fieldset {
+  clear: both;
+  margin-top: 1em;
+}
+
+input[type="checkbox"], input[type="radio"] {
+  width: 1em;
+}
+
+.formErrorMessage {
+  font-weight: 700;
+}
+
+.invalid {
+  border: 2px solid #cb4437;
+}
+
+input[type="checkbox"].invalid {
+  outline: 2px solid #cb4437 !important;
 }
 
 td {
@@ -390,8 +487,16 @@ td {
   border: 1px solid white;
 }
 
+.explain {
+  background: rgb(106,196,174);
+  border: 1px solid white;
+  font-size: 1.5em;
+}
+
 .score {
+  background-color: #e8f3f0;
   font-weight: 600;
   font-size: 1.5em;
   text-align: center;
+  border: 1px solid white;
 }

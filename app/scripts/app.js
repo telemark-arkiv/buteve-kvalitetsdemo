@@ -26,45 +26,45 @@ var App = React.createClass({
         <table>
           <thead>
           <tr>
-            <th>Faktor</th>
-            <th>Telemark</th>
-            <th>Buskerud</th>
-            <th>Vestfold</th>
+            <th className="explain">Faktor</th>
+            <th className="explain">Telemark</th>
+            <th className="explain">Buskerud</th>
+            <th className="explain">Vestfold</th>
           </tr>
           </thead>
           <tbody>
           <tr>
-            <td>Kodekvalitet</td>
+            <td className="explain">Kodekvalitet</td>
             <ShowStatus data={this.state.data} filter="kode" instans="tfk"></ShowStatus>
             <ShowStatus data={this.state.data} filter="kode" instans="bfk"></ShowStatus>
             <ShowStatus data={this.state.data} filter="kode" instans="vfk"></ShowStatus>
           </tr>
           <tr>
-            <td>Universell utforming</td>
+            <td className="explain">Universell utforming</td>
             <ShowStatus data={this.state.data} filter="wcag" instans="tfk"></ShowStatus>
             <ShowStatus data={this.state.data} filter="wcag" instans="bfk"></ShowStatus>
             <ShowStatus data={this.state.data} filter="wcag" instans="vfk"></ShowStatus>
           </tr>
           <tr>
-            <td>Hastighet desktop</td>
+            <td className="explain">Hastighet desktop</td>
             <ShowStatus data={this.state.data} filter="desktopSpeed" instans="tfk"></ShowStatus>
             <ShowStatus data={this.state.data} filter="desktopSpeed" instans="bfk"></ShowStatus>
             <ShowStatus data={this.state.data} filter="desktopSpeed" instans="vfk"></ShowStatus>
           </tr>
           <tr>
-            <td>Hastighet mobil</td>
+            <td className="explain">Hastighet mobil</td>
             <ShowStatus data={this.state.data} filter="mobileSpeed" instans="tfk"></ShowStatus>
             <ShowStatus data={this.state.data} filter="mobileSpeed" instans="bfk"></ShowStatus>
             <ShowStatus data={this.state.data} filter="mobileSpeed" instans="vfk"></ShowStatus>
           </tr>
           <tr>
-            <td>Brukeropplevelse mobil</td>
+            <td className="explain">Brukeropplevelse mobil</td>
             <ShowStatus data={this.state.data} filter="mobileUX" instans="tfk"></ShowStatus>
             <ShowStatus data={this.state.data} filter="mobileUX" instans="bfk"></ShowStatus>
             <ShowStatus data={this.state.data} filter="mobileUX" instans="vfk"></ShowStatus>
           </tr>
           <tr>
-            <td>Totalkvalitet</td>
+            <td className="explain">Totalkvalitet</td>
             <ShowScore data={this.state.data} instans="tfk"></ShowScore>
             <ShowScore data={this.state.data} instans="bfk"></ShowScore>
             <ShowScore data={this.state.data} instans="vfk"></ShowScore>
