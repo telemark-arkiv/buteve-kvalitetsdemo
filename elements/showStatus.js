@@ -2,14 +2,17 @@
 
 var React = require('react');
 
-function getClassName(val) {
+function getClassName(data, filter, instans) {
   var className = 'unknown';
-  if (parseInt(val, 10) === 1) {
-    className = 'success';
-  }
 
-  if (parseInt(val, 10) === 0) {
-    className = 'fail';
+  if (data && data[filter] && data[filter][instans]) {
+    if (parseInt(data[filter][instans], 10) === 1) {
+      className = 'success';
+    }
+
+    if (parseInt(data[filter][instans], 10) === -1) {
+      className = 'fail';
+    }
   }
 
   return className;
@@ -18,7 +21,7 @@ function getClassName(val) {
 var ShowStatus = React.createClass({
   render: function(){
     return (
-      <td className={getClassName(this.props.result)}>
+      <td className={getClassName(this.props.data, this.props.filter, this.props.instans)}>
       </td>
     )
   }

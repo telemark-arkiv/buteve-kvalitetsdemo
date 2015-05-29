@@ -1,16 +1,24 @@
 'use strict';
 
-var React = require('reactfire');
+var React = require('react');
+var Firebase = require('firebase');
 var ShowStatus = require('../../elements/showStatus');
 var ShowScore = require('../../elements/showScore');
 
 var App = React.createClass({
-  mixins: [ReactFireMixin],
   getInitialState: function() {
-    return {data:''};
+    return {data:{}};
   },
   componentWillMount: function() {
-    this.bindAsObject(new Firebase('https://pythonia.firebaseio.com/butevedemo'), 'data');
+    this.firebaseRef = new Firebase("https://pythonia.firebaseio.com/butevedemo");
+    this.firebaseRef.on("value", function(dataSnapshot) {
+      var data = dataSnapshot.val();
+      this.setState({
+        data: data
+      });
+    }.bind(this));
+
+
   },
   render: function(){
     return (
@@ -27,39 +35,39 @@ var App = React.createClass({
           <tbody>
           <tr>
             <td>Kodekvalitet</td>
-            <ShowStatus result="1"></ShowStatus>
-            <ShowStatus result="0"></ShowStatus>
-            <ShowStatus result="0"></ShowStatus>
+            <ShowStatus data={this.state.data} filter="kode" instans="tfk"></ShowStatus>
+            <ShowStatus data={this.state.data} filter="kode" instans="bfk"></ShowStatus>
+            <ShowStatus data={this.state.data} filter="kode" instans="vfk"></ShowStatus>
           </tr>
           <tr>
             <td>Universell utforming</td>
-            <ShowStatus result="1"></ShowStatus>
-            <ShowStatus result="0"></ShowStatus>
-            <ShowStatus result="0"></ShowStatus>
+            <ShowStatus data={this.state.data} filter="wcag" instans="tfk"></ShowStatus>
+            <ShowStatus data={this.state.data} filter="wcag" instans="bfk"></ShowStatus>
+            <ShowStatus data={this.state.data} filter="wcag" instans="vfk"></ShowStatus>
           </tr>
           <tr>
             <td>Hastighet desktop</td>
-            <ShowStatus result="1"></ShowStatus>
-            <ShowStatus result="0"></ShowStatus>
-            <ShowStatus result="0"></ShowStatus>
+            <ShowStatus data={this.state.data} filter="desktopSpeed" instans="tfk"></ShowStatus>
+            <ShowStatus data={this.state.data} filter="desktopSpeed" instans="bfk"></ShowStatus>
+            <ShowStatus data={this.state.data} filter="desktopSpeed" instans="vfk"></ShowStatus>
           </tr>
           <tr>
             <td>Hastighet mobil</td>
-            <ShowStatus result="1"></ShowStatus>
-            <ShowStatus result="0"></ShowStatus>
-            <ShowStatus result="0"></ShowStatus>
+            <ShowStatus data={this.state.data} filter="mobileSpeed" instans="tfk"></ShowStatus>
+            <ShowStatus data={this.state.data} filter="mobileSpeed" instans="bfk"></ShowStatus>
+            <ShowStatus data={this.state.data} filter="mobileSpeed" instans="vfk"></ShowStatus>
           </tr>
           <tr>
             <td>Brukeropplevelse mobil</td>
-            <ShowStatus result="1"></ShowStatus>
-            <ShowStatus result="1"></ShowStatus>
-            <ShowStatus result="1"></ShowStatus>
+            <ShowStatus data={this.state.data} filter="mobileUX" instans="tfk"></ShowStatus>
+            <ShowStatus data={this.state.data} filter="mobileUX" instans="bfk"></ShowStatus>
+            <ShowStatus data={this.state.data} filter="mobileUX" instans="vfk"></ShowStatus>
           </tr>
           <tr>
             <td>Totalkvalitet</td>
-            <td>80%</td>
-            <td>30%</td>
-            <td>40%</td>
+            <ShowScore data={this.state.data} instans="tfk"></ShowScore>
+            <ShowScore data={this.state.data} instans="bfk"></ShowScore>
+            <ShowScore data={this.state.data} instans="vfk"></ShowScore>
           </tr>
           </tbody>
         </table>

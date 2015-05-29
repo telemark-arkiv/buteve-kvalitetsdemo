@@ -377,12 +377,21 @@ td {
 
 .success {
   background-color: green;
+  border: 1px solid white;
 }
 
 .fail {
   background-color: red;
+  border: 1px solid white;
 }
 
 .unknown {
   background-color: lightgray;
+  border: 1px solid white;
+}
+
+.score {
+  font-weight: 600;
+  font-size: 1.5em;
+  text-align: center;
 }
