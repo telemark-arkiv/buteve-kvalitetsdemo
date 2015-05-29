@@ -16,7 +16,8 @@
     "test": "mocha --reporter spec test/*.js",
     "setup": "npm install && node setup.js",
     "dev": "gulp serve",
-    "build": "gulp"
+    "build": "gulp",
+    "collector": "node collector/index.js"
   },
   "keywords": [
     "poc",
@@ -66,5 +67,8 @@
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
     "vinyl-transform": "^1.0.0"
+  },
+  "dependencies": {
+    "wcag": "^0.1.6"
   }
 }

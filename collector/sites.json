@@ -1,0 +1,14 @@
+[
+  {
+    "id" : "bfk",
+    "url": "http://www.bfk.no"
+  },
+  {
+    "id" : "tfk",
+    "url": "http://www.telemark.no"
+  },
+  {
+    "id" : "vfk",
+    "url": "https://www.vfk.no"
+  }
+]
