@@ -1,3 +1,13 @@
+# IDE
+.idea
+
+# OS X
+.DS_Store
+
+# WebStarter kit
+.tmp
+dist
+
 # Logs
 logs
 *.log
