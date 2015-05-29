@@ -27,7 +27,7 @@ function checkWcag(options, callback) {
       }
       sendToFirebase(firebaseOptions, function(err, msg){
         if (err) {
-          return callback(err, null)
+          return callback(err, null);
         } else {
           return callback(null, msg);
         }

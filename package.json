@@ -69,6 +69,8 @@
     "vinyl-transform": "^1.0.0"
   },
   "dependencies": {
+    "gpagespeed": "^1.0.0",
+    "html-validator": "0.0.8",
     "wcag": "^0.1.6"
   }
 }
