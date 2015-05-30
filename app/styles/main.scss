@@ -368,7 +368,7 @@ main {
 /* Local varieties */
 
 table thead {
-  background: rgb(106,196,174);
+  background: #ffd520;
   color: black;
 }
 
@@ -483,18 +483,18 @@ td {
 }
 
 .unknown {
-  background-color: lightgray;
+  background-color: #e8f3f0;
   border: 1px solid white;
 }
 
 .explain {
-  background: rgb(106,196,174);
+  background: #ffd520;
   border: 1px solid white;
   font-size: 1.5em;
 }
 
 .score {
-  background-color: #e8f3f0;
+  background-color: rgb(106,196,174);
   font-weight: 600;
   font-size: 1.5em;
   text-align: center;
