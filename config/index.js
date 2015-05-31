@@ -5,7 +5,7 @@ var config = {
   FIREBASE_URL: 'your-firebase-url',
   FIREBASE_DB: 'your-firebase-db',
   ACHECKER_ID: 'your-achecker-id',
-  GOOGLE_API_KEY: 'your-google-id',
+  GOOGLE_API_KEY: 'your-google-api-key',
   SITES: [
     {
       'id' : 'bfk',
