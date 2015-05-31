@@ -4,8 +4,9 @@ var checkWcag = require('./checkWcag');
 var checkDesktop = require('./checkDesktop');
 var checkMobile = require('./checkMobile');
 var checkHtml = require('./checkHtml');
-var sites = require('./sites.json');
-var jobsTotal = 12;
+var config = require('../config');
+var sites = config.SITES;
+var jobsTotal = sites.length * 4;
 var jobsDone = 0;
 
 function areWeDoneYet() {
@@ -15,8 +16,6 @@ function areWeDoneYet() {
     process.exit(0);
   }
 }
-
-console.log('The collector is collecting');
 
 sites.forEach(function(site){
   checkWcag(site, function(error, message) {
