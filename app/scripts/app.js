@@ -4,21 +4,21 @@ var React = require('react');
 var Firebase = require('firebase');
 var ShowStatus = require('../../elements/showStatus');
 var ShowScore = require('../../elements/showScore');
+var config = require('../../config');
+var fbUrl = config.FIREBASE_URL + config.FIREBASE_DB;
 
 var App = React.createClass({
   getInitialState: function() {
     return {data:{}};
   },
   componentWillMount: function() {
-    this.firebaseRef = new Firebase("https://pythonia.firebaseio.com/butevedemo");
+    this.firebaseRef = new Firebase(fbUrl);
     this.firebaseRef.on("value", function(dataSnapshot) {
       var data = dataSnapshot.val();
       this.setState({
         data: data
       });
     }.bind(this));
-
-
   },
   render: function(){
     return (

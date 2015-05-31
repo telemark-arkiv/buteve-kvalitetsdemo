@@ -30,11 +30,14 @@ Innholdet i mappen dist kan nå lastes opp til en hvilken som helst webserver.
 Sett opp en database hos firebase.
 
 Åpne filen config/index.js og fyll ut de nødvendige feltene
-**FIREBASE_URL** url til din firebase-konto
-**FIREBASE_DB** databasen du skal benytte hos firebase
-**ACHECKER_ID** Din id-nøkkel hos AChecker
-**GOOGLE_API_KEY** Din API nøkkel for Googles PageSpeed Insight
 
+**FIREBASE_URL** url til din firebase-konto
+
+**FIREBASE_DB** databasen du skal benytte hos firebase
+
+**ACHECKER_ID** Din id-nøkkel hos AChecker
+
+**GOOGLE_API_KEY** Din API nøkkel for Googles PageSpeed Insight
 
 For å hente inn nyeste data kjøres collectorscriptet
 ```sh
@@ -47,7 +50,5 @@ Dersom du ønsker å tilpasse dashboardet for andre nettsteder enn de som er lag
 
 Du må endre SITES oppføringen i config/index.js for å settes opp datafangst for andre nettsteder.
  
-I app/scripts/app.js må du endre url og db for Firebas i linje 13 i ttilleg til at du endrer navn på innholdet i headerene (linje 31 - 32).
-For å vise data endrer du instans-propertien i alle ShowStatus og ShowScore oppføringene til å matche id til oppringene i SITES
-
-
+I app/scripts/app.js må du endre navn på innholdet i headerene (linje 31 - 32).
+For å vise innhentet data endrer du instans-propertien i alle ShowStatus og ShowScore oppføringene til å matche id til oppringene i SITES
