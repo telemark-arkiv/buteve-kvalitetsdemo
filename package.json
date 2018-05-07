@@ -70,7 +70,7 @@
   },
   "dependencies": {
     "gpagespeed": "4.0.5",
-    "html-validator": "3.0.0",
+    "html-validator": "3.0.1",
     "wcag": "0.3.0"
   }
 }
