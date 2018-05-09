@@ -35,7 +35,7 @@
   "devDependencies": {
     "apache-server-configs": "3.0.0",
     "browser-sync": "2.24.4",
-    "browserify": "16.2.0",
+    "browserify": "16.2.2",
     "del": "3.0.0",
     "firebase": "4.13.1",
     "gulp": "3.9.1",
